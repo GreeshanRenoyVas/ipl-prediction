@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict IPL Score</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏏 IPL Final Score Prediction</h1>
+
+        <form action="/result" method="POST">
+
+            <label>Batting Team:</label>
+            <select name="batting_team" required>
+                <option value="Chennai Super Kings">Chennai Super Kings</option>
+                <option value="Mumbai Indians">Mumbai Indians</option>
+                <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                <option value="Delhi Capitals">Delhi Capitals</option>
+                <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                <option value="Rajasthan Royals">Rajasthan Royals</option>
+                <option value="Punjab Kings">Punjab Kings</option>
+            </select>
+
+            <label>Bowling Team:</label>
+            <select name="bowling_team" required>
+                <option value="Chennai Super Kings">Chennai Super Kings</option>
+                <option value="Mumbai Indians">Mumbai Indians</option>
+                <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                <option value="Delhi Capitals">Delhi Capitals</option>
+                <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                <option value="Rajasthan Royals">Rajasthan Royals</option>
+                <option value="Punjab Kings">Punjab Kings</option>
+            </select>
+
+            <label>Overs Completed:</label>
+            <input type="number" name="overs" step="0.1" required>
+
+            <label>Runs:</label>
+            <input type="number" name="runs" required>
+
+            <label>Wickets:</label>
+            <input type="number" name="wickets" required>
+
+            <label>Runs in Last 5 Overs:</label>
+            <input type="number" name="runs_last_5" required>
+
+            <label>Wickets in Last 5 Overs:</label>
+            <input type="number" name="wickets_last_5" required>
+
+            <button type="submit" class="btn">Predict Score</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
